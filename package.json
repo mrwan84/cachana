@@ -1,0 +1,37 @@
+{
+  "name": "cachana",
+  "version": "1.0.0",
+  "description": "A lightweight in-memory cache with per-key TTL support",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/cachana-client.js"
+  },
+  "bin": {
+    "cachana": "bin/cli.js",
+    "cachana-server": "server/index.js"
+  },
+  "scripts": {
+    "test": "node test/cachana.test.js && node test/client.test.js && node test/cli.test.js",
+    "start": "node server/index.js"
+  },
+  "keywords": [
+    "cache",
+    "ttl",
+    "memory",
+    "in-memory",
+    "utility"
+  ],
+  "author": "Marwan Alsouki",
+  "homepage": "https://github.com/mrwan84",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrwan84/cachana.git"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "node-fetch": "^3.3.2"
+  }
+}
